@@ -12,6 +12,7 @@
   <h2>Libraries Used</h2>
   <ul>
     <li><strong>Speech Recognition:</strong> A powerful Python library that converts spoken language into written text. It offers a user-friendly interface to seamlessly integrate speech recognition capabilities into your applications, allowing them to understand and respond to human speech.</li>
+    <li><strong>PyAudio:</strong> PyAudio provides Python bindings for PortAudio v19, the cross-platform audio I/O library. With PyAudio, you can easily use Python to play and record audio on a variety of platforms, such as GNU/Linux, Microsoft Windows, and Apple macOS.</li>
   </ul>
 
   <h2>Developer Contacts</h2>
