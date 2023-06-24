@@ -1,6 +1,7 @@
 import random
 import speech_recognition as sr
 import sys
+import subprocess
 
 sr_obj = sr.Recognizer()
 sr_obj.pause_threshold = 0.5
@@ -8,6 +9,7 @@ sr_obj.pause_threshold = 0.5
 commands_dict = {
     'greeting': ['привет', 'приветствую', 'дарова'],
     'create_task': ['добавить задачу', 'создать задачу', 'заметка'],
+    'open_browser': ['открой браузер', 'открыть браузер'],
     'exit': ['выход', 'закрыть', 'пока']
 }
 
@@ -34,6 +36,9 @@ def create_task():
 
     return f'Задача {query} добавлена в todo-list!'
 
+def open_browser():
+    subprocess.Popen(r'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe')
+
 def exit_program():
     print('До свидания!')
     sys.exit()
@@ -45,6 +50,8 @@ def main():
         if query in keywords:
             if command == 'exit':
                 exit_program()
+            elif command == 'open_browser':
+                open_browser()
             else:
                 print(globals()[command]())
 
